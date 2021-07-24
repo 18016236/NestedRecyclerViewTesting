@@ -26,4 +26,6 @@
     <color name="grey">#E5E5E5</color>
     <color name="black_soft">#181A18</color>
     <color name="cadet_blue">#5F9EA0</color>
+    <color name="background">#E7E7E7</color>
+
 </resources>

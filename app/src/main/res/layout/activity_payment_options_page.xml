@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentOptionsPage">
+
+    <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/PaymentOptions"
+          android:orientation="vertical">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Payment Options"
+                  android:textSize="35dp"
+                  android:layout_marginLeft="75dp"
+                  android:layout_marginTop="15dp"
+                  android:id="@+id/Title"
+                  >
+
+              </TextView>
+
+              <RadioGroup
+                  android:id="@+id/RadioGroupPayments"
+                  android:layout_width="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_below="@+id/Title"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="15dp"
+                  android:layout_height="wrap_content">
+
+                  <RadioButton android:id="@+id/radio0"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:checked="true"
+                      android:text="PayLah to 83899826" />
+
+                  <RadioButton android:id="@+id/radio1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="BANK TRANSFER." />
+
+              </RadioGroup>
+
+
+
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="5dp"
+              android:background="@color/LightGray"
+              android:layout_below="@+id/PaymentOptions"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="4dp"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="Delivery Service is from Tuesday to Sunday 9am - 5pm.">
+
+          </TextView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:text="Cut-off Time for ordering: 9am - 2pm (And it will be deliver on the next day.)">
+
+          </TextView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:text="Prices are Subjective">
+
+          </TextView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:text="For any enquiries you may whatapps 89326905">
+
+          </TextView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:text="Our operational working days are from Tuesday to Sunday and Including Public Holidays as well.">
+
+          </TextView>
+
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:textColor="@color/Red"
+              android:text="Minimum order for delivery: $40.00.">
+
+          </TextView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:textColor="@color/Red"
+              android:text="Flat delivery fee: $8.00">
+
+          </TextView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:layout_marginLeft="5dp"
+              android:textColor="@color/Red"
+              android:text="Free delivery over $60.00">
+
+          </TextView>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:src="@drawable/ic_baseline_info_24"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Upon Payment , do indicate your username for easier processing of paymens"
+                  android:layout_margin="6dp"
+                  />
+
+          </LinearLayout>
+
+
+
+
+
+
+      </LinearLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

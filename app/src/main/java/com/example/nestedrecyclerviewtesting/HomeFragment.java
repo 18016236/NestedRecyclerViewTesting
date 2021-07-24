@@ -1,6 +1,7 @@
 package com.example.nestedrecyclerviewtesting;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,27 +9,47 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SearchView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
+
 
 import com.adapter.GroupAdapter;
 import com.model.Group;
 import com.model.Plant;
+import com.nex3z.notificationbadge.NotificationBadge;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import MoreOptions.MoreActivities;
+import butterknife.BindView;
+
 
 public class HomeFragment extends Fragment {
+    @BindView(R.id.home_RV)
+    RecyclerView home_RV;
+    @BindView(R.id.badge)
+    NotificationBadge badge;
+    @BindView(R.id.cartButton)
+    FrameLayout cartButton;
+    @BindView(R.id.mainLayout)
+    RelativeLayout mainLayout;
 
+
+    private SearchView svItems;
     private Context mContext;
     private RecyclerView recyclerView;
     private GroupAdapter adapter;
     private List<Group> groupList;
     private List<Plant>featuredList;
     private List<Plant>recommendList;
+    private Button btnMore;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -39,8 +60,31 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        btnMore = view.findViewById(R.id.group_button);
+        svItems = view.findViewById(R.id.SearchView);
+
+    
+
+        svItems.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intent = new Intent(HomeFragment.this.getContext(),SearchActivity.class);
+                intent.putExtra("query",query);
+                startActivity(intent);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
+
+        return view;
+
     }
 
     @Override

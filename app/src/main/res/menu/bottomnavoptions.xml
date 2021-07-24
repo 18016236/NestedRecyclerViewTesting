@@ -7,11 +7,10 @@
         android:enabled="true"
         />
     <item
-        android:id="@+id/Filter"
-        android:title="Filter"
-        android:icon="@drawable/ic_baseline_filter_list_24"
+        android:id="@+id/categories"
+        android:title="Categories"
+        android:icon="@drawable/ic_baseline_category_24"
         android:enabled="true"
-
         />
 
     <item

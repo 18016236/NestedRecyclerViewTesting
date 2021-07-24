@@ -2,15 +2,34 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nestedrecyclerviewtesting">
 
-    <application
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NestedRecyclerViewTesting">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.itemDetails.SauceAndPasteDetails"></activity>
+        <activity android:name="com.Categories.Pork" />
+        <activity android:name="com.Categories.Noodles" />
+        <activity android:name="com.Categories.Fruit" />
+        <activity android:name="com.Categories.YongTaoFoo" />
+        <activity android:name="com.Categories.FishAndSeaFood" />
+        <activity android:name="com.Categories.Chicken" />
+        <activity android:name="com.Categories.Vegetables" />
+        <activity android:name="MoreOptions.MoreActivities" />
+        <activity android:name="com.Categories.SauceAndPaste" />
+        <activity android:name=".PaymentOptionsPage" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ActivityForgetPassword" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RecommendedActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

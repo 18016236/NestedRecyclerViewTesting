@@ -6,8 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
+
+
   <RelativeLayout
       android:layout_width="match_parent"
+      android:id="@+id/mainLayout"
       android:layout_height="match_parent">
 
       <RelativeLayout
@@ -15,16 +18,38 @@
           android:layout_height="170dp"
           android:background="@color/followersBg"/>
 
+
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:id="@+id/title"
-          android:text="Goh Brothers"
+          android:text="大老四团圆 "
           android:textSize="20sp"
           android:textColor="@color/black"
           android:layout_marginTop="15dp"
           android:layout_marginStart="10dp"
           />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginLeft="350dp"
+          android:layout_marginTop="15dp"
+          android:id="@+id/cartButton"
+          android:src="@drawable/ic_baseline_shopping_cart_24">
+
+      </ImageView>
+
+      <com.nex3z.notificationbadge.NotificationBadge
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:id="@+id/badge"
+          android:layout_toRightOf="@+id/cartButton"
+          android:layout_alignTop="@+id/cartButton"
+          app:nbMaxTextLength="2"/>
+
+
       <View
           android:layout_width="30dp"
           android:layout_below="@+id/title"
@@ -53,6 +78,7 @@
               android:theme="@style/SearchView"
               app:iconifiedByDefault="true"
               app:queryHint="Search"
+              android:id="@+id/SearchView"
               app:queryBackground="@android:color/transparent"/>
 
       </LinearLayout>

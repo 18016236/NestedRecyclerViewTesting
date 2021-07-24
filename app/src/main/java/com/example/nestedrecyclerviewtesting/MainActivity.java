@@ -42,9 +42,11 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.home:
                             selectedFragment = new HomeFragment();
                             break;
-                        case R.id.Filter:
-                            selectedFragment = new FilterFragment();
+
+                        case R.id.categories:
+                            selectedFragment = new CategoriesFragment();
                             break;
+
                         case R.id.settings:
                             selectedFragment = new SettingsFragment();
                             break;

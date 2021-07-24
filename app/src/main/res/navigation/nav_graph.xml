@@ -10,11 +10,12 @@
         android:name="com.example.nestedrecyclerviewtesting.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
-        android:id="@+id/Filter"
-        android:name="com.example.nestedrecyclerviewtesting.FilterFragment"
-        android:label="fragment_filter"
-        tools:layout="@layout/fragment_filter" />
+        android:id="@+id/categories"
+        android:name="com.example.nestedrecyclerviewtesting.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
 
     <fragment
         android:id="@+id/settings"
