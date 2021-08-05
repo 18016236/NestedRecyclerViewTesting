@@ -63,24 +63,11 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         btnMore = view.findViewById(R.id.group_button);
-        svItems = view.findViewById(R.id.SearchView);
+
 
     
 
-        svItems.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Intent intent = new Intent(HomeFragment.this.getContext(),SearchActivity.class);
-                intent.putExtra("query",query);
-                startActivity(intent);
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
 
 
         return view;
@@ -109,12 +96,12 @@ public class HomeFragment extends Fragment {
         recommendList.add(new Plant("Malaysian Cabbages","Malaysia","$5.50/Kg",R.drawable.cabbages));
         recommendList.add(new Plant("Dutch Mushroom","Netherlands","$8.50/Kg",R.drawable.mushroom));
         recommendList.add(new Plant("Thai Broccoli","Thailand","$9.50/Kg",R.drawable.broccoli));
-        recommendList.add(new Plant("Singapore Chilli","Singapore","$0.50/Kg",R.drawable.chilli));
+        recommendList.add(new Plant("Singapore Chilli","Singapore","$0.50/Kg",R.drawable.chillipadi));
 
         featuredList.add(new Plant("Malaysian Cabbages","Malaysia","$5.50/Kg",R.drawable.cabbages));
         featuredList.add(new Plant("Dutch Mushroom","Netherlands","$8.50/Kg",R.drawable.mushroom));
         featuredList.add(new Plant("Thai Broccoli","Thailand","$9.50/Kg",R.drawable.broccoli));
-        featuredList.add(new Plant("Singapore Chilli","Singapore","$0.50/Kg",R.drawable.chilli));
+        featuredList.add(new Plant("Singapore Chilli","Singapore","$0.50/Kg",R.drawable.chillipadi));
 
     }
 

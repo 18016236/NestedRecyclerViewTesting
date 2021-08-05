@@ -13,4 +13,15 @@
         <item>Noodles</item>
         <item>Pork</item>
     </string-array>
+
+    <string-array name="ChilliPadiOptions">
+        <item>Chili Padi 小红辣椒 100G $0.90</item>
+        <item>Chili Padi 小红辣椒 200G $1.80</item>
+        <item>Chili Padi 小红辣椒 300G $2.70</item>
+        <item>Chili Padi 小红辣椒 400G $3.60</item>
+        <item>Chili Padi 小红辣椒 500G $4.50</item>
+
+    </string-array>
+
+
 </resources>

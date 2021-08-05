@@ -30,15 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <androidx.appcompat.widget.SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/SearchView"
-            app:iconifiedByDefault="true"
-            app:queryHint="Search"
-            android:id="@+id/SearchView"
+        <View
+            android:layout_width="30dp"
             android:layout_below="@+id/textGrid"
-            app:queryBackground="@android:color/transparent"/>
+            android:layout_height="5dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/view"
+            android:background="@drawable/bg_search"
+            android:layout_marginLeft="195dp" />
+
 
 
 
@@ -53,6 +53,7 @@
             app:rowCount="3"
             android:layout_height="0dp"
             app:alignmentMode="alignMargins"
+            android:layout_marginBottom="50dp"
             app:columnOrderPreserved="false">
 
         <androidx.cardview.widget.CardView

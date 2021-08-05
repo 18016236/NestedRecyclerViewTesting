@@ -1,9 +1,11 @@
 package com.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nestedrecyclerviewtesting.MoreActivities;
 import com.example.nestedrecyclerviewtesting.R;
 import com.model.Group;
 import com.model.Plant;
@@ -22,6 +25,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
     private List<Group>groupList;
     private List<Plant>featuredList;
     private List<Plant>recommendList;
+    private Button btnMore;
 
     public GroupAdapter(Context context, List<Group> groupList, List<Plant> featuredList, List<Plant> recommendList) {
         this.context = context;
@@ -61,6 +65,14 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.ViewHolder> 
             groupTitle = itemView.findViewById(R.id.group_title);
             groupButton = itemView.findViewById(R.id.group_button);
             recyclerView = itemView.findViewById(R.id.group_RV);
+
+            groupButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(context, MoreActivities.class);
+                    context.startActivity(i);
+                }
+            });
         }
 
         public void setList(RecyclerView recyclerView , int position){

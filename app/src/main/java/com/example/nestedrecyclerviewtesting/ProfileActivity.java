@@ -25,13 +25,14 @@ public class ProfileActivity extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseAuth mAuth;
     String userID;
+    Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
+        btnBack = findViewById(R.id.btnBack);
 
         db = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
@@ -42,6 +43,14 @@ public class ProfileActivity extends AppCompatActivity {
         TvPassword = findViewById(R.id.TvPassword);
         TvUserName = findViewById(R.id.TvUserName);
         TVHomeAddress = findViewById(R.id.TvHomeAddress);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ProfileActivity.this,SettingsFragment.class);
+                finish();
+            }
+        });
 
         DocumentReference documentReference = db.collection("users").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {

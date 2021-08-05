@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     EditText etEmail,etPassword,etUsername,etHomeAddress;
     Button btnSignup;
-    TextView tvBanner;
+    TextView tvBanner,tvBack;
     String userID;
 
 
@@ -55,6 +55,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         btnSignup = findViewById(R.id.btnRegister);
         btnSignup.setOnClickListener(this);
 
+        tvBack = findViewById(R.id.tvBack);
+
+        tvBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(RegisterActivity.this,ActivityLogin.class);
+                startActivity(i);
+            }
+        });
+
     };
     public void onClick(View v) {
         switch (v.getId()){
@@ -64,6 +74,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
     }
+
 
     private void registerUser() {
         String email = etEmail.getText().toString().trim();
