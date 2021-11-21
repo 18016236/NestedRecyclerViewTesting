@@ -24,36 +24,16 @@
               <TextView
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:text="Payment Options"
+                  android:text="Contact Us"
                   android:textSize="35dp"
-                  android:layout_marginLeft="75dp"
+                  android:layout_marginLeft="120dp"
                   android:layout_marginTop="15dp"
                   android:id="@+id/Title"
                   >
 
               </TextView>
 
-              <RadioGroup
-                  android:id="@+id/RadioGroupPayments"
-                  android:layout_width="wrap_content"
-                  android:orientation="vertical"
-                  android:layout_below="@+id/Title"
-                  android:layout_marginTop="15dp"
-                  android:layout_marginLeft="15dp"
-                  android:layout_height="wrap_content">
 
-                  <RadioButton android:id="@+id/radio0"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:checked="true"
-                      android:text="PayLah to 83899826" />
-
-                  <RadioButton android:id="@+id/radio1"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="BANK TRANSFER." />
-
-              </RadioGroup>
 
 
 
@@ -66,7 +46,13 @@
               android:layout_below="@+id/PaymentOptions"
               android:layout_centerHorizontal="true"
               android:layout_marginTop="4dp"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:text="Chat on WhatsApp with +65 8932 6905">
 
+          </TextView>
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"

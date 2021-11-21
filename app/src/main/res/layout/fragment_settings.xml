@@ -193,12 +193,12 @@
                    <ImageView
                        android:layout_width="30dp"
                        android:layout_height="30dp"
-                       android:src="@drawable/ic_baseline_payment_24"/>
+                       android:src="@drawable/ic_baseline_contact_page_24"/>
 
                    <TextView
                        android:layout_width="match_parent"
                        android:layout_height="wrap_content"
-                       android:text="Payment Options"
+                       android:text="Contact Us"
                        android:layout_margin="6dp"
                        android:textSize="18sp"/>
 
