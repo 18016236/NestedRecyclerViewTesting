@@ -15,7 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 
@@ -50,6 +52,8 @@ public class HomeFragment extends Fragment {
     private List<Plant>featuredList;
     private List<Plant>recommendList;
     private Button btnMore;
+    private EditText etSearchField;
+    private ImageButton SearchBtn;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -63,10 +67,18 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         btnMore = view.findViewById(R.id.group_button);
-
-
+        etSearchField = view.findViewById(R.id.search_field);
+        SearchBtn = view.findViewById(R.id.search_btn);
+        recyclerView = view.findViewById(R.id.home_RV);
     
 
+        etSearchField.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeFragment.this.getActivity(),SearchActivity.class);
+                startActivity(i);
+            }
+        });
 
 
 

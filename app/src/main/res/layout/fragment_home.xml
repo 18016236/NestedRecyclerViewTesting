@@ -13,11 +13,11 @@
       android:id="@+id/mainLayout"
       android:layout_height="match_parent">
 
+
       <RelativeLayout
           android:layout_width="match_parent"
-          android:layout_height="170dp"
-          android:background="@color/followersBg"/>
-
+          android:layout_height="140dp"
+          android:background="@color/white" />
 
       <TextView
           android:layout_width="wrap_content"
@@ -27,8 +27,8 @@
           android:textSize="20sp"
           android:textColor="@color/black"
           android:layout_marginTop="15dp"
-          android:layout_marginStart="10dp"
-          />
+
+          android:layout_marginLeft="10dp" />
 
       <ImageView
           android:layout_width="wrap_content"
@@ -60,12 +60,45 @@
           android:background="@drawable/bg_search"
           android:layout_marginLeft="14dp" />
 
+      <EditText
+          android:id="@+id/search_field"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignStart="@+id/title"
+          android:layout_below="@+id/title"
+          android:layout_marginRight="20dp"
+          android:layout_marginTop="20dp"
+          android:layout_toStartOf="@+id/search_btn"
+          android:background="@drawable/search_layout"
+          android:ems="10"
+          android:fontFamily="@font/nunito_semibold"
+          android:hint="Search here"
+          android:inputType="textPersonName"
+          android:paddingBottom="10dp"
+          android:paddingLeft="20dp"
+          android:paddingRight="20dp"
+          android:paddingTop="10dp"
+          android:textColor="#999999"
+          android:textSize="16sp"
+          android:layout_toLeftOf="@+id/search_btn" />
 
 
+      <ImageButton
+          android:id="@+id/search_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="53dp"
+          android:layout_alignTop="@+id/search_field"
+          android:layout_alignBottom="@+id/search_field"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_marginEnd="30dp"
+          android:layout_marginRight="30dp"
+          android:layout_marginBottom="-11dp"
+          android:background="@android:color/background_light"
+          app:srcCompat="@mipmap/search_button" />
 
 
-
-        <androidx.recyclerview.widget.RecyclerView
+      <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/home_RV"

@@ -28,4 +28,8 @@
     <color name="cadet_blue">#5F9EA0</color>
     <color name="background">#E7E7E7</color>
 
+    <color name="searchColourPrimary">#6361F4</color>
+    <color name="searchColourSecondary">#303F9F</color>
+    <color name="searchColourThird">#FF4081</color>
+
 </resources>
